@@ -13,10 +13,10 @@ See the object *oMain* to see a usage example
 
 # Function Reference
 *Primary Functions*
-#### `stenSet( surface, buffer )` 
+### `stenSet( surface, buffer )` 
 Embeds the buffer data into the surface and returns the originally passed in surface index
 
-#### `stenGet( surface )`
+### `stenGet( surface )`
 Gets the surface as a buffer and extracts data based on the header, returns a buffer containing the data if success
 
 *Internal Functions*
