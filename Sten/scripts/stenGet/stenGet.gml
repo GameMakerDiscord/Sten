@@ -1,4 +1,4 @@
-/// @function stenRead( surface )
+/// @function stenGet( surface )
 /// @argument surface The surface to get the data from
 var _stenSurface = argument[0],
 	_stenOutputBuffer = undefined,
@@ -12,6 +12,10 @@ for(var i = 0; i < 4; i++) {
 		_stenByte += (buffer_read(_stenSurfaceBuffer, buffer_u8) & 0xF) << j * 0x4;
 	}
 	_stenSize += _stenByte << 8 * i;
+}
+
+if (_stenSize < 0 || _stenSize > buffer_get_size(_stenSurfaceBuffer)) {
+	show_error("An invalid data size was read, image could have been compressed or modified.", true);
 }
 
 // Read the hash from the image (40 bytes)
@@ -36,7 +40,7 @@ for(var i = 0; i < _stenSize; i++) {
 
 // Check the hash to verify integrity of read data
 if (buffer_sha1(_stenOutputBuffer, 0, buffer_tell(_stenOutputBuffer)) != _stenHash) {
-	show_error("Could not verify the integrity of the data read from image, data could have been compressed.", true);	
+	show_error("Could not verify the integrity of the data read from image, data could have been compressed or modified.", true);	
 }
 
 // Free previously used buffer from memory
