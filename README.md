@@ -2,17 +2,21 @@
 Least-significant nibble stenography implementation for GameMaker
 
 # Compatibility
-Windows: ✓
+Windows: ✅
 
-Mac: ✓
+Mac: ✅
 
-HTML5: ?
+HTML5: ❓
 
-Ubuntu: ?
+Ubuntu: ❓
 
-Android: ?
+Android: ❓
 
-iOS: ?
+iOS: ❓
+
+Xbox One: ❓
+
+PS4: ❓
 
 # Usage
 Simply create a surface and a buffer that contains data you want to write to the surface. Use **stenSet** to write data to the surface and **stenGet** to read data from the surface into a buffer
