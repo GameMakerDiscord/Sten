@@ -1,6 +1,8 @@
 # Sten
 Least-significant nibble stenography implementation for GameMaker
 
+Maintained by: Nommiin
+
 # Compatibility
 Windows: ✅
 
