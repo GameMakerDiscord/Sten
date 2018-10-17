@@ -1,5 +1,5 @@
 # Sten
-Least-significant nibble stenography implementation for GameMaker
+Least-significant nibble steganography implementation for GameMaker
 
 Maintained by: Nommiin
 
